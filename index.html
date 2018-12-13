@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slick</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+</head>
+<body>
+<section id="home-slide">
+  <div id="box-slide">    
+        <div class="single-item">
+            <div class="box-slide-item">
+<img data-lazy="https://www.naturalworldsafaris.com/~/media/images/destinations/colombia/nws-st-colombia-coffee-landscape.jpg">
+              <!-- <div class="box-slide-mask"></div> -->
+            </div>
+            <div class="box-slide-item">
+<img data-lazy="https://images.unsplash.com/photo-1544642182-a3ae27c6b1a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+             <!--   <div class="box-slide-mask"></div> -->
+            </div>
+            <div class="box-slide-item">
+<img data-lazy="https://images.unsplash.com/photo-1544653023-7e729ed521c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+              <!--  <div class="box-slide-mask"></div> -->
+            </div>
+            <div class="box-slide-item">
+<img data-lazy="https://images.unsplash.com/photo-1544655760-f2e8910e0e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+              <!--  <div class="box-slide-mask"></div> -->
+            </div>
+         </div>
+  </div>
+</section>
+
+<style type="text/css">
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* no tocar*/
+section#home-slide {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#box-slide{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.single-item{
+  width: 100%;
+  height: 100vh; 
+  margin: 0 auto;
+}
+
+.box-slide-item{
+  position: relative;
+}
+
+.box-slide-mask{
+ position: absolute;
+ width: 100%;
+ height: 100vh;
+ top: 50%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ color: white;
+ -webkit-transition: all 300ms ease;
+ transition: all 300ms ease;
+ background: rgba(0, 0, 0, 0.5);
+ z-index: 99999;
+}
+
+.box-slide-text span {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 75%;
+}
+
+
+.slick-slide {
+  text-align: center;
+  height: 100vh !important;
+}
+
+.slick-next {
+    right: 25px !important;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 25px !important;
+    z-index: 1;
+}
+
+.slick-dots {
+    bottom: 10px !important;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0px !important; 
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+
+.slick-slide img{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+/*Primer Slider */
+ #box-slide > .single-item .slick-prev:before{
+  color: #ff00dc !important;
+}
+
+ #box-slide > .single-item .slick-next:before{
+  color: #ff00dc !important;
+}
+/*Primer Slider */
+
+
+/*Segundo Slider */
+#home-slide2 > #box-slide > .single-item2 .slick-prev:before{
+  color:  #00ffe7 !important;
+}
+
+#home-slide2 > #box-slide > .single-item2 .slick-next:before{
+  color:  #00ffe7 !important;
+}
+
+#home-slide2 > #box-slide > .single-item2 .slick-dots li button:before {
+  font-size: 8px !important;
+}
+
+#home-slide2 > #box-slide > .single-item2 .slick-dots li button:before {
+    opacity: 1;
+    color: white !important;
+}
+/*Segundo Slider */
+</style>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".single-item").slick({
+    dots: true,
+    arrows: true,
+    adaptiveHeight: true,
+    fade: true,
+    mobileFirst: true,
+    cssEase: 'linear',
+    lazyLoad: 'ondemand',
+    adaptiveHeight: true,
+    adaptiveWidth: true,
+    arrows: true,
+    centerMode: true,
+    autoplay: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    centerPadding:false,
+    });
+    $(".single-item2").slick({
+    dots: true,
+    adaptiveHeight: true,
+    adaptiveWidth: true,
+    arrows: true,
+    prevArrow: false,
+    nextArrow: false,
+    centerMode: true,
+    autoplay: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    centerPadding:false,
+    });
+  });
+</script>
+
+
+</body>
+</html>
+
+
